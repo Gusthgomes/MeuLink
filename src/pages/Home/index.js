@@ -8,6 +8,7 @@ import api from '../../services/api';
 export default function Home(){
 
     const [link, setLink] = useState("");
+    const [data, setData] = useState({});
     const [ showModal, setShowModal ] = useState(false);
 
     async function handleShortLink(){
@@ -16,7 +17,9 @@ export default function Home(){
                 long_url: link
             })
 
-            console.log(response)
+            setData(response.data)
+            setShowModal(true)
+            setLink('');
 
         }catch{
             alert("OPS! parece que algo deu errado...")
@@ -51,6 +54,7 @@ export default function Home(){
         { showModal && (
             <LinkItem
                 closeModal={ () => setShowModal(false)}
+                content={data}
             />
         )}
       </div>
