@@ -16,6 +16,10 @@ export default function Menu(){
             <Link className='menu-item' to="/links">
                 Meus links
             </Link>
+
+            <Link className='menu-item' to="/contact">
+                Sobre mim
+            </Link>
         </div>
     )
 }
