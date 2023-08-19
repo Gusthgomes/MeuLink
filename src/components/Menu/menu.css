@@ -23,3 +23,12 @@
     border-radius: 4px;
     margin-right: 14px;
 }
+
+@media (max-width:730px){
+    .menu{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
